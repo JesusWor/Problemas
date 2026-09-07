@@ -1,140 +1,94 @@
-# 🧠 Coding Solutions — LeetCode & HackerRank
+# Problemas
 
-> A personal collection of my solutions to problems from **LeetCode** and **HackerRank**, written in multiple programming languages.
+Repositorio personal de soluciones a problemas de programacion, organizado por plataforma: LeetCode, HackerRank y competencias de tipo ICPC. Las soluciones estan escritas principalmente en C++, Java y Python.
 
----
+Este no es un paquete ni una libreria instalable, sino una coleccion de codigo de referencia. Puede clonarse o forkearse directamente para consultar los enfoques, comparar soluciones o usarlo como base de estudio.
 
-## 📁 Repository Structure
+## Estructura del repositorio
 
 ```
-📦 coding-solutions/
-├── 📂 LeetCode/
-│   ├── 📂 Easy/
-│   ├── 📂 Hard/
-│   └── 📂 Medium/
-├── 📂 HackerRank/
-│   ├── 📂 Arrays/
-│   ├── 📂 Greedy/
-│   └──  📂 Math/
+Problemas/
+├── LeetCode/
+│   ├── Easy/
+│   └── Medium/
+│       └── <numero> <NombreDelProblema>/
+│           ├── solucion.cpp
+│           ├── solucion.py
+│           └── Solucion.java
+├── HackeRanck/
+│   ├── Algorithms/
+│   ├── Greedy/
+│   └── Math/
+├── ICPC2026-Fase0/
+│   ├── Problemas/      # enunciados en PDF
+│   └── Soluciones/     # codigo de las soluciones
 └── README.md
 ```
 
----
+Cada carpeta de problema puede incluir la misma solucion en mas de un lenguaje (C++, Python, Java), segun como se haya resuelto originalmente. No todos los problemas cuentan con las tres versiones.
 
-## 🚀 Platforms
+Esta estructura esta pensada para crecer: pueden agregarse carpetas de problemas o plataformas nuevas sin necesidad de modificar este documento.
 
-| Platform | Profile |
-|---|---|
-| 🟡 LeetCode | [JesusWor on LeetCode](https://leetcode.com/JesusWor) |
-| 🟢 HackerRank | [JesusWor on HackerRank](https://www.hackerrank.com/JesusWor) |
+## Requisitos
 
----
+- Compilador de C++ (g++ o equivalente)
+- JDK (Java 8 o superior)
+- Python 3
 
-## 💻 Languages Used
+## Uso
 
-- 🐍 Python
-- ☕ Java
-- ⚡ C / C++
-- 🌐 JavaScript / TypeScript
-- 🦀 And more...
+### Clonar el repositorio
 
----
-
-## 🗂️ Problem Index
-
-Each solution file includes:
-- 📝 **Problem statement** (brief description or link)
-- 💡 **Approach** used to solve it
-- ⏱️ **Time & Space complexity**
-- 🔗 **Link** to the original problem
-
----
-
-## 📌 Topics Covered
-
-| Category | Topics |
-|---|---|
-| Data Structures | Arrays, Linked Lists, Trees, Graphs, Stacks, Queues, Heaps |
-| Algorithms | Sorting, Searching, Dynamic Programming, Greedy, Backtracking |
-| Math | Number Theory, Combinatorics, Bit Manipulation |
-| Databases | SQL queries (HackerRank) |
-
----
-
-## 🏆 Progress
-
-| Platform | Solved |
-|---|---|
-| LeetCode | ![LeetCode](https://img.shields.io/badge/LeetCode-Solving-orange?style=flat&logo=leetcode) |
-| HackerRank | ![HackerRank](https://img.shields.io/badge/HackerRank-Solving-brightgreen?style=flat&logo=hackerrank) |
-
----
-
-## ⚙️ How to Run a Solution
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/JesusWor/coding-solutions.git
-   cd coding-solutions
-   ```
-
-2. Navigate to the problem folder and run it with the appropriate language:
-   ```bash
-   # Python
-   python solution.py
-
-   # JavaScript
-   node solution.js
-
-   # Java
-   javac Solution.java && java Solution
-
-   # C++
-   g++ solution.cpp -o solution && ./solution
-   ```
-
----
-
-## 🤝 Contributing
-
-This is a personal learning repository. However, if you spot an error or have a more optimal solution, feel free to open an **issue** or submit a **pull request**. All feedback is welcome!
-
----
-
-## ⚠️ Disclaimer
-
-These solutions are written **for educational purposes only**. Please do not copy and submit them directly as your own to any platform — it defeats the purpose of learning. Use them as a reference to understand different approaches.
-
----
-
-## 📄 License
-
-```
-MIT License
-
-Copyright (c) 2026 JesusWor
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+```bash
+git clone https://github.com/JesusWor/Problemas.git
+cd Problemas
 ```
 
+### Crear un fork
+
+Utilice el boton "Fork" en GitHub para obtener una copia propia y clone esa copia siguiendo el mismo procedimiento, reemplazando la URL por la de su fork.
+
+### Ejecutar una solucion
+
+```bash
+# Python
+python3 ruta/al/archivo.py
+
+# C++
+g++ ruta/al/archivo.cpp -o solucion && ./solucion
+
+# Java
+javac ruta/al/Archivo.java && java -cp ruta/al Archivo
+```
+
+Ajuste la ruta y el nombre del archivo o clase segun el problema que desee ejecutar.
+
+## Lenguajes utilizados
+
+- C++
+- Java
+- Python
+
+## Temas cubiertos
+
+| Categoria             | Ejemplos                                                              |
+| ---------------------- | ---------------------------------------------------------------------- |
+| Estructuras de datos   | Arreglos, listas ligadas, pilas, colas                                 |
+| Algoritmos             | Busqueda, ordenamiento, greedy, matematicas                            |
+| Programacion competitiva | Problemas de fases eliminatorias estilo ICPC (enunciado en PDF y solucion) |
+
+## Contribuciones
+
+Este es un repositorio de aprendizaje personal. Si encuentra un error o propone una solucion mas eficiente, puede abrir un issue o un pull request. Se agradece cualquier retroalimentacion.
+
+## Aviso
+
+Estas soluciones tienen fines educativos. Se recomienda usarlas como referencia para comprender distintos enfoques y no enviarlas directamente como propias a ninguna plataforma de evaluacion.
+
+## Licencia
+
+Distribuido bajo licencia MIT. Si el archivo `LICENSE` aun no existe en la raiz del repositorio, se recomienda agregarlo con el texto estandar de dicha licencia.
+
 ---
 
-<p align="center">
-  Made by <a href="https://github.com/JesusWor">JesusWor</a>
-</p>
+Mantenido por [JesusWor](https://github.com/JesusWor)
