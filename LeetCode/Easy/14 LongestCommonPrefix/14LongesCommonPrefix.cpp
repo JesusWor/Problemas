@@ -1,24 +1,25 @@
+#include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
 
 using namespace std;
 
+// Solcion de chatgpt
 string longestCommonPrefix(vector<string> &strs)
 {
     if (strs.empty())
-        return ""; // Edge case: empty input
+        return "";
 
-    string prefix = strs[0]; // Start with the first string as the prefix
+    string prefix = strs[0];
 
     for (int i = 1; i < strs.size(); i++)
     {
-        // Compare the current prefix with the next string
         while (strs[i].find(prefix) != 0)
-        {                                                   // Check if prefix is not a prefix of strs[i]
-            prefix = prefix.substr(0, prefix.length() - 1); // Reduce the prefix by one character
+        {
+            prefix = prefix.substr(0, prefix.length() - 1); // Reduce el prefijo caracter por caracter
             if (prefix.empty())
-                return ""; // If prefix becomes empty, return
+                return "";
         }
     }
 
@@ -32,17 +33,17 @@ public:
     {
         if (strs.size() == 0)
             return "";
+
         string prefix = "";
         for (int i = 0; i < strs[0].length(); i++)
         {
             char ch = strs[0][i];
             for (string s : strs)
             {
-                if (ch == s[i])
-                {
-                    continue;
-                }
-                else
+                // Validación agregada: evita acceso fuera de rango si "s"
+                // es mas corto que strs[0] (en el codigo original esto
+                // era undefined behavior si i >= s.length()).
+                if (i >= s.length() || ch != s[i])
                 {
                     return prefix;
                 }
@@ -52,3 +53,12 @@ public:
         return prefix;
     }
 };
+
+int main()
+{
+    Solution sol;
+    vector<string> ejemplo1 = {"flower", "flow", "flight"};
+    cout << "Prefijo comun: \"" << sol.longestCommonPrefix(ejemplo1) << "\"" << endl;
+
+    return 0;
+}
