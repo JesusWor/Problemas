@@ -1,4 +1,4 @@
-public class StrinToInteger8{
+public class StringToInteger8{
     public static int myAtoi(String s) {
         int i = 0, n = s.length(), sign = 1, result = 0;
 

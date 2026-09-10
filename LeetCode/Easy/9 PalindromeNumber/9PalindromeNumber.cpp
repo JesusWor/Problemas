@@ -1,3 +1,5 @@
+#include <iostream>
+
 class Solution
 {
 public:
@@ -18,3 +20,22 @@ public:
         return (reversed == x);
     }
 };
+
+int main()
+{
+    Solution sol;
+
+    int x1 = 121;
+    std::cout << "x = " << x1 << " -> Es palindromo: "
+               << (sol.isPalindrome(x1) ? "true" : "false") << std::endl;
+
+    int x2 = -121;
+    std::cout << "x = " << x2 << " -> Es palindromo: "
+               << (sol.isPalindrome(x2) ? "true" : "false") << std::endl;
+
+    int x3 = 10;
+    std::cout << "x = " << x3 << " -> Es palindromo: "
+               << (sol.isPalindrome(x3) ? "true" : "false") << std::endl;
+
+    return 0;
+}
