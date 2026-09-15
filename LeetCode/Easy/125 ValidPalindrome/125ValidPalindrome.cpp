@@ -1,30 +1,36 @@
 #include <iostream>
 #include <String>
 #include <algorithm>
-using namespace std;
 
-bool isPalindrome(string s)
-{
-    string filtered;
-    // Permitira filtrar los caracteres alfabeticos y los convertira en minuscilas ademas de que se almacenaran en una variable
-    for (char c : s)
+
+class Solution {
+public:
+    bool isPalindrome(std::string s)
     {
-        if (isalnum(c))
+        std::string filtered;
+        // Permitira filtrar los caracteres alfabeticos y los convertira en minuscilas ademas de que se almacenaran en una variable
+        for (char c : s)
         {
-            filtered += tolower(c);
+            if (isalnum(c))
+            {
+                filtered += tolower(c);
+            }
         }
+        std::string reversed = filtered;
+        reverse(reversed.begin(), reversed.end());
+        return filtered == reversed;
     }
-    string reversed = filtered;
-    reverse(reversed.begin(), reversed.end());
-    return filtered == reversed;
-}
+};
 
 int main()
 {
-    string palabra;
-    cout << "Ingrese una palabra: ";
-    cin >> palabra;
+    Solution sol;
+    // Salida esperada ejemplo 1: true
+    std::string s = "A man, a plan, a canal: Panama";
+    std::cout<<"Salida ejemplo 1: "<<sol.isPalindrome(s)<<std::endl;
 
-    cout << isPalindrome(palabra);
+    // Salida esperada ejemplo 2: true
+    s = " ";
+    std::cout<<"Salida ejemplo 2: "<<sol.isPalindrome(s)<<std::endl;
     return 0;
 }
