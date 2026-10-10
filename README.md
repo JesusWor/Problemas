@@ -10,11 +10,12 @@ Este no es un paquete ni una libreria instalable, sino una coleccion de codigo d
 Problemas/
 ├── LeetCode/
 │   ├── Easy/
+│   ├── Hard/
 │   └── Medium/
 │       └── <numero> <NombreDelProblema>/
-│           ├── solucion.cpp
-│           ├── solucion.py
-│           └── Solucion.java
+│           ├── <NumNombredelProblema>.cpp
+│           ├── <NumNombredelProblema>.py
+│           └── <NombredelProblemaNum>.java
 ├── HackeRanck/
 │   ├── Algorithms/
 │   ├── Greedy/
@@ -22,6 +23,8 @@ Problemas/
 ├── ICPC2026-Fase0/
 │   ├── Problemas/      # enunciados en PDF
 │   └── Soluciones/     # codigo de las soluciones
+├── Runner/
+│   └── main.py
 └── README.md
 ```
 
