@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <unordered_set>
+#include <unordered_map>
 #include <algorithm>
 
 using namespace std;
@@ -8,23 +8,19 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        unordered_set<char> st;
-        int maxLen = 0;
-        int i = 0;
-        int j = 0;
-        int n = s.length();
+        std::unordered_map<char, int> last;
+        int maximum = 0;
+        int start = 0;
 
-        while (j < n) {
-            if (st.find(s[j]) == st.end()) {
-                st.insert(s[j]);
-                j++;
-                maxLen = max(maxLen, (int)st.size());
-            } else {
-                st.erase(s[i]);
-                i++;
+        for(int i=0; i < s.size(); i++){
+            char c = s[i];
+            if(last.count(c) && last[c] >= start){
+                start = last[c] + 1;
             }
+            last[c] = i;
+            maximum = std::max(maximum, i-start+1);
         }
-        return maxLen;
+        return maximum;
     }
 };
 

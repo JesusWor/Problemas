@@ -1,23 +1,7 @@
-import static java.util.stream.Collectors.toList;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.*;
 import java.util.stream.Stream;
 
 public class BetweenTwoSets {
-     /*
-     * Complete the 'getTotalX' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts following parameters:
-     * 1. INTEGER_ARRAY a
-     * 2. INTEGER_ARRAY b
-     */
-
     public static int getTotalX(List<Integer> a, List<Integer> b) {
         if (a == null || b == null || a.isEmpty() || b.isEmpty()) {
             return 0;
@@ -51,7 +35,7 @@ public class BetweenTwoSets {
         return contador;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         List<Integer> a = Arrays.asList(2, 4);
         List<Integer> b = Arrays.asList(16, 32, 96);
         System.out.println(getTotalX(a, b));
